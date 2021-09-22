@@ -9,4 +9,6 @@ RUN mvn clean install
 FROM adoptopenjdk:15-jre-hotspot
 WORKDIR app
 COPY --from=builder /app/target/goku-food-api.jar .
+
+EXPOSE 8080
 ENTRYPOINT ["java", "-XX:MaxRAMPercentage=75.0", "-XX:ActiveProcessorCount=1", "-jar", "goku-food-api.jar"]
