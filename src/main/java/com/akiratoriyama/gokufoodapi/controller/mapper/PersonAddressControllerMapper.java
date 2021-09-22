@@ -34,7 +34,7 @@ public class PersonAddressControllerMapper extends BaseControllerMapper {
 	public PersonAddressResponse to(PersonAddress ped) {
 		return PersonAddressResponse.builder()
 				.id(ped.getId())
-				.ts(ped.getConvertedTs())
+				.ts(ped.getTs())
 				.line1(ped.getLine1())
 				.line2(ped.getLine2())
 				.neighborhood(ped.getNeighborhood())

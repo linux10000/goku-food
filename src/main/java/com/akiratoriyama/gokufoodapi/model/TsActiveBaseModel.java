@@ -11,7 +11,6 @@ import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import com.akiratoriyama.gokufoodapi.infra.util.Const;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.AllArgsConstructor;
@@ -34,11 +33,10 @@ public abstract class TsActiveBaseModel extends BaseModel {
     @Column(name = "created_at", nullable = false )
     private LocalDateTime created;
 	
-    //TODO testar se isso realmente funciona
-    @JsonIgnore
-//	@Version //TODO causando problema para salvar entidades nao atachadas
+    //TODO implementar controle de concorrencia
     @LastModifiedDate
 	@Column(name = "ts", nullable = false, columnDefinition = Const.FieldType.TIMESTAMP )
+    @JsonProperty("ts")
 	private LocalDateTime ts;
 	
 	@Column(name = "active", nullable = false )
@@ -52,16 +50,5 @@ public abstract class TsActiveBaseModel extends BaseModel {
 	@Override
 	public int hashCode() {
 		return super.hashCode();
-	}
-	
-	@JsonProperty("ts")
-	public LocalDateTime getConvertedTs() {
-//		return DateUtil.from(ts);
-		return ts;
-	}
-	
-	public void setConvertedTs(LocalDateTime ts) {
-//		this.ts = DateUtil.from(ts);
-		this.ts = ts;
 	}
 }

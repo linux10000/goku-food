@@ -125,7 +125,7 @@ class StateServiceTest {
 				.id(sta.getId())
 				.name(newName)
 				.countryId(BigInteger.ZERO)
-				.ts(sta.getConvertedTs())
+				.ts(sta.getTs())
 				.build()
 				);
 		
@@ -152,7 +152,7 @@ class StateServiceTest {
 	private StateInsertSTO createStateSTO() {
 		return 
 				StateInsertSTO.builder()
-				.name("Sao Paulo")
+				.name("ZZZZzdfsdf")
 				.countryId(BigInteger.ONE)
 				.build();
 	}
@@ -160,7 +160,7 @@ class StateServiceTest {
 	private CountryInsertSTO createCountrySTO() {
 		return 
 				CountryInsertSTO.builder()
-				.name("Brazil")
+				.name("Brasdasdas")
 				.isoCode("BR")
 				.build();
 	}

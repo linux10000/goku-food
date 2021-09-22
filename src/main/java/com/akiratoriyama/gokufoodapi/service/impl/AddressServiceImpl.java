@@ -86,9 +86,9 @@ public class AddressServiceImpl implements AddressService {
 		address.setLine2(sto.getLine2());
 		address.setNeighborhood(sto.getNeighborhood());
 		address.setZipCode(FormatUtil.getOnlyNumbersAndLetters(sto.getZipCode()));
-		address.setConvertedTs(sto.getTs());
+		address.setTs(sto.getTs());
 		address.setCity(new City(sto.getCityId()));
-		address.setConvertedTs(sto.getTs());
+		address.setTs(sto.getTs());
 		
 		return addressRepository.save(address);
 	}

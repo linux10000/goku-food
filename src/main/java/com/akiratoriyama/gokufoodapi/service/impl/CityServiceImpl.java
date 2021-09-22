@@ -59,7 +59,7 @@ public class CityServiceImpl implements CityService {
 		City city = cityRepository.findByIdAndActive(sto.getId(), true).orElseThrow(CityNotFoundException::new);
 		
 		city.setName(sto.getName());
-		city.setConvertedTs(sto.getTs());
+		city.setTs(sto.getTs());
 		city.setState(new State(sto.getStateId()));
 		
 		return cityRepository.save(city);

@@ -137,7 +137,7 @@ class CityServiceTest {
 				.id(cit.getId())
 				.name(newName)
 				.stateId(BigInteger.ONE)
-				.ts(cit.getConvertedTs())
+				.ts(cit.getTs())
 				.build()
 				);
 		
@@ -164,7 +164,7 @@ class CityServiceTest {
 	private CityInsertSTO createCitySTO() {
 		return 
 				CityInsertSTO.builder()
-				.name("Santos")
+				.name("Axxxasdds")
 				.stateId(BigInteger.ONE)
 				.build();
 	}
@@ -172,7 +172,7 @@ class CityServiceTest {
 	private StateInsertSTO createStateSTO() {
 		return 
 				StateInsertSTO.builder()
-				.name("Sao Paulo")
+				.name("SSassoosdsddss")
 				.countryId(BigInteger.ONE)
 				.build();
 	}
@@ -180,8 +180,8 @@ class CityServiceTest {
 	private CountryInsertSTO createCountrySTO() {
 		return 
 				CountryInsertSTO.builder()
-				.name("Brazil")
-				.isoCode("BR")
+				.name("Brasdasdas")
+				.isoCode("BZ")
 				.build();
 	}
 }

@@ -163,7 +163,7 @@ class AddressServiceTest {
 				.id(adr.getId())
 				.line1(newStreetName)
 				.cityId(BigInteger.ONE)
-				.ts(adr.getConvertedTs())
+				.ts(adr.getTs())
 				.build()
 				);
 		
@@ -193,7 +193,7 @@ class AddressServiceTest {
 				.line1("Rua sobe e desce 123")
 				.line2("Sem mais")
 				.neighborhood("Meu Bairro")
-				.zipCode("11070020")
+				.zipCode("6546545")
 				.cityId(BigInteger.ONE)
 				.build();
 	}
@@ -201,7 +201,7 @@ class AddressServiceTest {
 	private CityInsertSTO createCitySTO() {
 		return 
 				CityInsertSTO.builder()
-				.name("Santos")
+				.name("Asdasdasdas")
 				.stateId(BigInteger.ONE)
 				.build();
 	}
@@ -209,7 +209,7 @@ class AddressServiceTest {
 	private StateInsertSTO createStateSTO() {
 		return 
 				StateInsertSTO.builder()
-				.name("Sao Paulo")
+				.name("SSAaasoos")
 				.countryId(BigInteger.ONE)
 				.build();
 	}
@@ -217,8 +217,8 @@ class AddressServiceTest {
 	private CountryInsertSTO createCountrySTO() {
 		return 
 				CountryInsertSTO.builder()
-				.name("Brazil")
-				.isoCode("BR")
+				.name("Brrsdfsdfsd")
+				.isoCode("BP")
 				.build();
 	}
 }

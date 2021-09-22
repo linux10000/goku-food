@@ -60,7 +60,7 @@ public class StateServiceImpl implements StateService {
 		State state = stateRepository.findByIdAndActive(sto.getId(), true).orElseThrow(StateNotFoundException::new);
 		
 		state.setName(sto.getName());
-		state.setConvertedTs(sto.getTs());
+		state.setTs(sto.getTs());
 		state.setCountry(new Country(sto.getCountryId()));
 		
 		return stateRepository.save(state);

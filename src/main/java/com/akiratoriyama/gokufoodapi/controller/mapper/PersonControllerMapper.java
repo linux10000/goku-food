@@ -30,7 +30,7 @@ public class PersonControllerMapper extends BaseControllerMapper {
 	public PersonResponse to(Person pes) {
 		return PersonResponse.builder()
 				.id(pes.getId())
-				.ts(pes.getConvertedTs())
+				.ts(pes.getTs())
 				.firstName(pes.getFirstName())
 				.lastName(pes.getLastName())
 				.legalType(fromEnum(pes.getLegalType()))

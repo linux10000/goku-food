@@ -71,7 +71,7 @@ public class PersonServiceImpl implements PersonService {
 		person.setFirstName(sto.getFirstName());
 		person.setLastName(sto.getLastName());
 		person.setLegalType(sto.getLegalType());
-		person.setConvertedTs(sto.getTs());
+		person.setTs(sto.getTs());
 		
 		return personRepository.save(person);
 	}

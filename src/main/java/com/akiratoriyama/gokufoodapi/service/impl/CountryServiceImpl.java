@@ -59,7 +59,7 @@ public class CountryServiceImpl implements CountryService {
 		
 		country.setName(sto.getName());
 		country.setIsoCode(sto.getIsoCode());
-		country.setConvertedTs(sto.getTs());
+		country.setTs(sto.getTs());
 		
 		return countryRepository.save(country);
 	}

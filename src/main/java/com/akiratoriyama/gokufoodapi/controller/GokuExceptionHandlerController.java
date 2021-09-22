@@ -121,60 +121,6 @@ public class GokuExceptionHandlerController {
 	}
 	
 	
-	
-	//TODO clean here
-	
-//	@ExceptionHandler({DataAccessException.class, PersistenceException.class, JpaSystemException.class, UncategorizedSQLException.class, HcfDBException.class, PSQLException.class, RegistroAlteradoPorOutroUsuarioException.class})
-//	public ResponseEntity<Map<String, Object>> handleDBError(Throwable ex, WebRequest request) {
-//		ex.printStackTrace();
-//		
-//		HcfDBException hcfDBException = null;
-//		if ( ex instanceof HcfPgException ) //esse if existe por causa de herenca, sendo essa classe a super classe, ou seja, esse metodo eh chamado como super.handle...
-//			hcfDBException = (HcfDBException) ex;
-//		else
-//			hcfDBException = PGExceptionResolver.resolve(ex);
-//		
-//		if ( ex instanceof RegistroAlteradoPorOutroUsuarioException )
-//			return handleRegistroAlteradoPorOutroUsuarioException((RegistroAlteradoPorOutroUsuarioException) ex);
-//		
-//		if ( hcfDBException instanceof RegistroAlteradoPorOutroUsuarioException )
-//			return handleRegistroAlteradoPorOutroUsuarioException((RegistroAlteradoPorOutroUsuarioException) hcfDBException);
-//		
-//		if ( hcfDBException instanceof HcfPgConstraintViolationException ) 
-//			return handlePgConstraintValidationException((HcfPgConstraintViolationException) hcfDBException);
-//		
-//		Map<String, Object> r = new HashMap<String, Object>();
-//		
-//		if ( hcfDBException instanceof HcfPgException ) {
-//			r.put("sqlState", ((HcfPgException)hcfDBException).getSqlState());
-//			r.put("hint", ((HcfPgException)hcfDBException).getHint());
-//		}
-//			
-//		r.put("message", hcfDBException.getMessage());
-//		r.put("exception", hcfDBException.getClass().getSimpleName());
-//		r.put("code", "003");
-//		
-//		return new ResponseEntity<Map<String,Object>>(r, getHeadersPadrao(), HttpStatus.INTERNAL_SERVER_ERROR);
-//	}
-
-	
-//	private ResponseEntity<Map<String,Object>> handlePgConstraintValidationException(HcfPgConstraintViolationException e) {
-//		Map<String, Object> r = new HashMap<String, Object>();
-//		
-//		r.put("sqlState", e.getSqlState());
-//		r.put("table", e.getTable());
-//		r.put("column", e.getColumn());
-//		r.put("constraint", e.getConstraint());
-//		r.put("tipo", e.getTipo().map(PgConstraintViolationKind::name).orElse(""));
-//		r.put("message", e.getMessage());
-//		r.put("detail", e.getDetail());
-//		r.put("exception", e.getClass().getSimpleName());
-//		r.put("code", "001");
-//		
-//		return new ResponseEntity<Map<String,Object>>(r, getHeadersPadrao(), HttpStatus.INTERNAL_SERVER_ERROR);
-//	}
-	
-	
 	@Data
 	@AllArgsConstructor
 	public static class InvalidConstraint {

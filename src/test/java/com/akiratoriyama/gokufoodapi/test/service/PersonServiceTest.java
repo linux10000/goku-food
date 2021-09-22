@@ -92,7 +92,7 @@ class PersonServiceTest {
 				.firstName(newFirstName)
 				.lastName(pes.getLastName())
 				.legalType(pes.getLegalType())
-				.ts(pes.getConvertedTs())
+				.ts(pes.getTs())
 				.build()
 				);
 		

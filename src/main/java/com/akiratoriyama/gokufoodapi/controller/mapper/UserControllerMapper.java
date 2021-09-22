@@ -34,7 +34,7 @@ public class UserControllerMapper extends BaseControllerMapper {
 					.firstName(data.getPerson().getFirstName())
 					.lastName(data.getPerson().getLastName())
 					.legalType(this.fromEnum(data.getPerson().getLegalType()))
-					.ts(data.getConvertedTs())
+					.ts(data.getTs())
 				.build();
 	}
 	
@@ -42,7 +42,7 @@ public class UserControllerMapper extends BaseControllerMapper {
 		return UserResponse.builder()
 				.id(usr.getId())
 				.login(usr.getLogin())
-				.ts(usr.getConvertedTs())
+				.ts(usr.getTs())
 				.firstName(usr.getPerson().getFirstName())
 				.lastName(usr.getPerson().getLastName())
 				.legalType(this.fromEnum(usr.getPerson().getLegalType()))

@@ -68,9 +68,9 @@ public class PersonAddressServiceImpl implements PersonAddressService {
 		personAddress.setLine2(sto.getLine2());
 		personAddress.setNeighborhood(sto.getNeighborhood());
 		personAddress.setZipCode(sto.getZipCode());
-		personAddress.setConvertedTs(sto.getTs());
+		personAddress.setTs(sto.getTs());
 		personAddress.setCity(new City(sto.getCityId()));
-		personAddress.setConvertedTs(sto.getTs());
+		personAddress.setTs(sto.getTs());
 		personAddress.setType(sto.getType());
 		
 		return personAddressRepository.save(personAddress);

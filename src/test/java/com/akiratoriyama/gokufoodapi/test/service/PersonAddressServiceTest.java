@@ -149,7 +149,7 @@ class PersonAddressServiceTest {
 				.line1(newStreetName)
 				.cityId(BigInteger.ONE)
 				.cityId(BigInteger.ONE)
-				.ts(ped.getConvertedTs())
+				.ts(ped.getTs())
 				.build()
 				);
 		

@@ -105,7 +105,7 @@ class CountryServiceTest {
 				.id(cou.getId())
 				.name(newName)
 				.isoCode(cou.getIsoCode())
-				.ts(cou.getConvertedTs())
+				.ts(cou.getTs())
 				.build()
 				);
 		
@@ -132,8 +132,8 @@ class CountryServiceTest {
 	private CountryInsertSTO createCountrySTO() {
 		return 
 				CountryInsertSTO.builder()
-				.name("Brazil")
-				.isoCode("BR")
+				.name("Brrrasdasd")
+				.isoCode("BB")
 				.build();
 	}
 }

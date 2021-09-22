@@ -31,7 +31,7 @@ public class UserResourceControllerMapper extends BaseControllerMapper {
 	public UserResourceResponse to(UserResource pes) {
 		return UserResourceResponse.builder()
 				.id(pes.getId())
-				.ts(pes.getConvertedTs())
+				.ts(pes.getTs())
 				.resource(pes.getResource())
 				.user(to(pes.getUser()))
 				.build();
